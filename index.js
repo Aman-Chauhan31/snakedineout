@@ -68,6 +68,10 @@ function isGameOver() {
     context.font = "50px Verdana";
     overSound.play();
     setTimeout(show, 3500);
+    setTimeout(() => {
+      document.getElementById("start").innerHTML =
+        "Refresh to Restart the Game";
+    }, 3500);
 
     function show() {
       context.fillText("Game Over!", canva.width / 6.5, canva.height / 2);
